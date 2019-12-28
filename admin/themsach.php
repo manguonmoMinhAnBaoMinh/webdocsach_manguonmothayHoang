@@ -33,9 +33,9 @@ if (!empty($_SESSION['current_user'])) {
 
                 $hinhanh=$_FILES['hinhanh']['name'];
                 $hinhanh_tmp=$_FILES['hinhanh']['tmp_name'];
-                move_uploaded_file($hinhanh_tmp,'../uploads/img/'.$hinhanh);
+                move_uploaded_file($hinhanh_tmp,'../img/'.$hinhanh);
               
-                $folder_path = '../uploads/pdf/';
+                $folder_path = '../pdf/';
                 $filename = basename($_FILES['filesach']['name']);
                 $newname = $folder_path . $filename;
                 move_uploaded_file($_FILES['filesach']['tmp_name'], $newname);

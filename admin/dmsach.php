@@ -42,7 +42,7 @@ $data = mysqli_query($connect, $query);
     <h1>Danh sách nhà xuất bản</h1>
     <div class="product-items">
         <div class="buttons">
-            <a href="testthem.php">Thêm thông tin sách</a>
+            <a href="themsach.php">Thêm thông tin sách</a>
         </div>
         <table class="fixed_header">
             <thead>
@@ -58,25 +58,27 @@ $data = mysqli_query($connect, $query);
                 </tr>
             </thead>
             <tbody>
-                <?php $i=1;
-                    while($row = mysqli_fetch_array($data)){
+                <?php $i = 1;
+                while ($row = mysqli_fetch_array($data)) {
                 ?>
-                <tr>
-                    <td><?php echo $i;?></td>
-                    <td><p style="width: 100px; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;"><?php echo $row['tesach']?></td>
-                    <td><img src="../uploads/img/<?php echo $row['hinhanh']?>" alt="" width="70px" height="90px"></td>
-                    <td><?php echo $row['tentheloai']?></td>
-                    <td><?php echo $row['nxb']?></td>
-                    <td><?php echo $row['tacgia']?></td>
-                    <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Xóa</a></s></td>
-                    <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Sửa</a></s></td>
-                </tr>
+                    <tr>
+                        <td><?php echo $i; ?></td>
+                        <td>
+                            <p style="width: 100px; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;"><?php echo $row['tesach'] ?>
+                        </td>
+                        <td><img src="../img/<?php echo $row['hinhanh'] ?>" alt="" width="70px" height="90px"></td>
+                        <td><?php echo $row['tentheloai'] ?></td>
+                        <td><?php echo $row['nxb'] ?></td>
+                        <td><?php echo $row['tacgia'] ?></td>
+                        <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Xóa</a></s></td>
+                        <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Sửa</a></s></td>
+                    </tr>
                 <?php $i++;
-                    }
+                }
                 ?>
             </tbody>
         </table>
-     
+
 
     </div>
 

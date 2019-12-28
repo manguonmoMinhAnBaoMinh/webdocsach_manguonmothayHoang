@@ -7,15 +7,18 @@ $data = mysqli_query($connect, $query);
 
 $i = 0;
 
+
 while ($row = mysqli_fetch_array($data)) {
+    $name = $row['tesach'];
+    $urls = "pdf/$name"; 
 ?>
     <div>
 
-        <!-- <div class="headding-products">
+    -    <!-- <div class="headding-products">
 		<h4>thể loại tâm lý</h4>
 	</div> -->
 
-        <div class="col-md-3 flex-col" style="margin-top: 15px">
+        <<div class="col-md-3 flex-col" style="margin-top: 15px">
             <div class="product">
                 <div class="image-feature-product">
                     <a href="#"><img src="img/<?php echo $row['hinhanh']; ?>"></a>
@@ -26,7 +29,7 @@ while ($row = mysqli_fetch_array($data)) {
                     </h4>
                 </div>
             </div>
-        </div>
+        </div> 
 
     <?php $i++;
 } ?>

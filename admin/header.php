@@ -28,7 +28,6 @@ and open the template in the editor.
     mysqli_close($con);
     ?>
     <?php
-    include '../function.php';
     if (!empty($_SESSION['current_user'])) { //Kiểm tra xem đã đăng nhập chưa?
         ?>
         <div id="admin-heading-panel">
@@ -38,7 +37,7 @@ and open the template in the editor.
                 </div>
                 <div class="right-panel">
                     <img height="24" src="../images/home.png" />
-                    <a href="#">Trang chủ</a>
+                    <a href="../index.php">Trang chủ</a>
                     <img height="24" src="../images/logout.png" />
                     <a href="logout.php">Đăng xuất</a>
                 </div>
