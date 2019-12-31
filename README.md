@@ -106,17 +106,17 @@
 - Một số hình ảnh demo trang web:
 
 #### Hình ảnh giao diện menu chính PC
-<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/4#issue-544249658">
+<img src="https://user-images.githubusercontent.com/55776442/71631086-4c1dc980-2c39-11ea-819e-6976d8e51ece.png">
 
 #### Hình ảnh giao diện menu chính trên Mobile
-<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/5#issue-544249955">
+<img src="https://user-images.githubusercontent.com/55776442/71631130-92732880-2c39-11ea-9e9c-447301732b2b.jpg">
 
 #### Hình ảnh giao diện chi tiết của một cuốn sách
-<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/6#issue-544250061">
+<img src="https://user-images.githubusercontent.com/55776442/71631145-a74fbc00-2c39-11ea-8a7c-565f8f1e5c41.png">
 
 
 #### Hình ảnh giao diện đọc sách
-<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/7#issue-544250214">
+<img src="https://user-images.githubusercontent.com/55776442/71631173-cb130200-2c39-11ea-95b3-2b1f0e4fdd97.png">
 
 <a name="mr"></a>
 # Một số phương án mở rộng
