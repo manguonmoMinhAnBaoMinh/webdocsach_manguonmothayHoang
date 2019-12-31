@@ -105,8 +105,25 @@
 # Hình ảnh giao diện
 - Một số hình ảnh demo trang web:
 
+#### Hình ảnh giao diện menu chính PC
+<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/4#issue-544249658">
+
+#### Hình ảnh giao diện menu chính trên Mobile
+<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/5#issue-544249955">
+
+#### Hình ảnh giao diện chi tiết của một cuốn sách
+<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/6#issue-544250061">
+
+
+#### Hình ảnh giao diện đọc sách
+<img src="https://github.com/manguonmoMinhAnBaoMinh/webdocsach_manguonmothayHoang/issues/7#issue-544250214">
+
 <a name="mr"></a>
 # Một số phương án mở rộng
+
+- Thay đổi giao diện đẹp hơn...
+- Đổi lại chi tiết người dùng...
+
 
 
 
