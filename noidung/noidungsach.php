@@ -10,8 +10,7 @@
 	
 	color: #999999;
 	font-size: 13px;
-	line-height: 100px;
-	height: 100px;
+
 }
 
 #pdf-contents 
@@ -36,7 +35,8 @@
 }
 
 #page-count-container 
-{margin-top: 3px;
+{
+	margin-top: 3px;
 	text-align: center;
 }
 
@@ -53,7 +53,7 @@
 #pdf-canvas 
 {
 	border: 1px solid rgba(0,0,0,0.2);
-	box-sizing: border-box;
+
 }
 
 #page-loader 
@@ -62,7 +62,7 @@
 	line-height: 100px;
 	text-align: center;
 	display: none;
-	color: #999999;
+
 	font-size: 13px;
 }
 .site-footer
@@ -75,8 +75,7 @@
 <?php
 require "dbcon.php";
 
-$query = "SELECT * FROM sach WHERE idsach = '12' ";
-
+$query = "SELECT * FROM sach WHERE idsach = '" . $_GET['id'] ."' ";
 
 $data = mysqli_query($connect, $query);
 
@@ -87,6 +86,8 @@ while ($row = mysqli_fetch_array($data)) {
     $urls = "pdf/$name"; 
 ?>
 <div id="pdf-main-container">
+	<h1><?php echo $row['tesach']?></h1>
+	<h3>Tác giả: <?php echo $row['tacgia']?></h3>
 	<div id="pdf-loader">Loading document ...</div>
 	<div id="pdf-contents">
 		<div id="pdf-meta">
@@ -113,7 +114,9 @@ var __PDF_DOC,
 	__PAGE_RENDERING_IN_PROGRESS = 0,
 	__CANVAS = $("#pdf-canvas").get(0),
 	__CANVAS_CTX = __CANVAS.getContext('2d');
-showPDF("pdf/abd.pdf");
+	$bien = 
+showPDF(<?php echo json_encode($urls)?>);
+
 function showPDF(pdf_url) {
 	$("#pdf-loader").show();
 

@@ -30,7 +30,6 @@ if (!empty($_SESSION['current_user'])) {
             <?php
             if (isset($_GET['action']) && $_GET['action'] == 'add') {
 
-
                 $hinhanh=$_FILES['hinhanh']['name'];
                 $hinhanh_tmp=$_FILES['hinhanh']['tmp_name'];
                 move_uploaded_file($hinhanh_tmp,'../img/'.$hinhanh);
@@ -40,7 +39,7 @@ if (!empty($_SESSION['current_user'])) {
                 $newname = $folder_path . $filename;
                 move_uploaded_file($_FILES['filesach']['tmp_name'], $newname);
             
-                $qr= "INSERT INTO `sach` (`mota`, `tesach`, `hinhanh`, `pdf`, `idnxb`, `idtl`, `idtg`) VALUES ('" . $_POST['mota'] . "', '" . $_POST['tensach'] . "', '$hinhanh', '$filename', '" . $_POST['nxb'] . "', '" . $_POST['theloai'] . "', '" . $_POST['tacgia'] . "');"; 
+                $qr= "INSERT INTO `sach` (`mota`, `tesach`, `hinhanh`, `pdf`, `idnxb`, `idtl`, `tacgia`) VALUES ('" . $_POST['mota'] . "', '" . $_POST['tensach'] . "', '$hinhanh', '$filename', '" . $_POST['nxb'] . "', '" . $_POST['theloai'] . "', '" . $_POST['tacgia'] . "');"; 
                 $result=mysqli_query($connect,$qr) or die("Error query string!");
                 if($result){
                     header("Location: ../admin/dmsach.php");
@@ -54,7 +53,6 @@ if (!empty($_SESSION['current_user'])) {
 
                     <input type="submit" title="Lưu sản phẩm" value="" />
                     <div class="clear-both"></div>
-
                
             <div class="wrap-field">
                 <label>Tên sách: </label>

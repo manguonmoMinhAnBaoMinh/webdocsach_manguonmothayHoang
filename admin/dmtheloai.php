@@ -60,8 +60,8 @@ $data = mysqli_query($connect, $query);
                 <tr>
                     <td><?php echo $i;?></td>
                     <td><?php echo $row['tentheloai']?></td>
-                    <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Xóa</a></s></td>
-                    <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Sửa</a></s></td>
+                    <td style="font-weight: bold;"><a href="xulyxoatl.php?id=<?php echo $row['idtl'];?>" style=" text-decoration: none;">Xóa</a></s></td>
+                    <td style="font-weight: bold;"><a href="xulysuatl.php?id=<?php echo $row['idtl'];?>" style=" text-decoration: none;">Sửa</a></td>
                 </tr>
                 <?php $i++;
                     }

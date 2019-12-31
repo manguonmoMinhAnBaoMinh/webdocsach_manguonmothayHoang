@@ -34,7 +34,7 @@
 include 'header.php';
 require "../dbcon.php";
 
-$query = "SELECT * FROM theloai, sach, nxb, tacgia where theloai.idtl = sach.idtl and nxb.idnxb=sach.idnxb and tacgia.idtg = sach.idtg";
+$query = "select * from sach, theloai, nxb where sach.idnxb = nxb.idnxb and sach.idtl = theloai.idtl";
 
 $data = mysqli_query($connect, $query);
 ?>
@@ -57,26 +57,28 @@ $data = mysqli_query($connect, $query);
                     <th>Sửa</th>
                 </tr>
             </thead>
+
             <tbody>
-                <?php $i = 1;
-                while ($row = mysqli_fetch_array($data)) {
+            <?php $i=1;
+                    while($row = mysqli_fetch_array($data)){
                 ?>
                     <tr>
-                        <td><?php echo $i; ?></td>
+                        <td><?php echo $i;?></td>
                         <td>
-                            <p style="width: 100px; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;"><?php echo $row['tesach'] ?>
+                            <p style="width: 100px; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;"><?php echo $row['tesach'];?></p>
                         </td>
-                        <td><img src="../img/<?php echo $row['hinhanh'] ?>" alt="" width="70px" height="90px"></td>
-                        <td><?php echo $row['tentheloai'] ?></td>
-                        <td><?php echo $row['nxb'] ?></td>
-                        <td><?php echo $row['tacgia'] ?></td>
-                        <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Xóa</a></s></td>
-                        <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Sửa</a></s></td>
+                        <td><img src="../img/<?php echo $row['hinhanh'];?>" alt="<?php echo $row['tesach'];?>" width="70px" height="90px"></td>
+                        <td><?php echo $row['tentheloai'];?></td>
+                        <td><?php echo $row['nxb'];?></td>
+                        <td><?php echo $row['tacgia'];?></td>
+                        <td style="font-weight: bold;"><a href="xulyxoasach.php?id=<?php echo $row['idsach'];?>" style=" text-decoration: none;">Xóa</a></td>
+                        <td style="font-weight: bold;"><a href="xulysuasach.php?id=<?php echo $row['idsach'];?>" style=" text-decoration: none;">Sửa</a></td>
                     </tr>
-                <?php $i++;
-                }
+                    <?php $i++;
+                    }
                 ?>
             </tbody>
+  
         </table>
 
 

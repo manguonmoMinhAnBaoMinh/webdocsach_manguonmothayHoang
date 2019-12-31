@@ -36,7 +36,7 @@
 					<!-- row -->
 					<div class="row">
 
-						<div class="col-md-3">
+					<div class="col-md-3 hide-x">
 							<div class="sidebar">
 								<!-- thong tin the loai -->
 								<?php include('module/left/thongtintheloai.php') ?>
@@ -48,7 +48,7 @@
 						<div class="col-md-9">
 							<div class="wrapper-products">
 								<div class="row">
-									<?php include('noidung/noidungsach.php'); ?>
+								<?php include('content.php')?>
 								</div>
 							</div>
 						</div>

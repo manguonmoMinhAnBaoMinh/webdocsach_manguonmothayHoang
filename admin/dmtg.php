@@ -34,23 +34,22 @@
 include 'header.php';
 require "../dbcon.php";
 
-$query = "SELECT * FROM tacgia";
+$query = "SELECT * FROM sach";
 
 $data = mysqli_query($connect, $query);
 ?>
 <div class="main-content">
-    <h1>Danh sách tác giả</h1>
+    <h1>Danh sách tác giả </h1>
     <div class="product-items">
-      <div class="buttons">
-            <a href="themtg.php">Thêm tác giả</a>
-        </div>  
+        <div class="buttons">
+            <a href="dmsach.php">Trở về danh mục sách</a>
+        </div>
         <table class="fixed_header">
             <thead>
                 <tr>
                     <th>Số thứ tự</th>
                     <th>Tên tác giả</th>
-                    <th>Xóa</th>
-                    <th>Sửa</th>
+                    <th>Thay đổi</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,8 +59,7 @@ $data = mysqli_query($connect, $query);
                 <tr>
                     <td><?php echo $i;?></td>
                     <td><?php echo $row['tacgia']?></td>
-                    <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Xóa</a></s></td>
-                    <td style="font-weight: bold;"><a href="#" style=" text-decoration: none;">Sửa</a></s></td>
+                    <td style="font-weight: bold;"><a href="xulysuasach.php?id=<?php echo $row['idsach'];?>" style=" text-decoration: none;">Sửa</a></td>
                 </tr>
                 <?php $i++;
                     }
